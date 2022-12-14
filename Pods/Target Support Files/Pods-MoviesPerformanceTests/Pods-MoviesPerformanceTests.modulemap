@@ -1,0 +1,6 @@
+framework module Pods_MoviesPerformanceTests {
+  umbrella header "Pods-MoviesPerformanceTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
