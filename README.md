@@ -9,7 +9,7 @@ Movies is an application that shows movie details.
 
 ## Architecture
 
-![Screenshot](https://github.com/liort2020/Movies/blob/develop/Assets/MoviesArchitecture.png)
+![Screenshot](https://github.com/liort2020/Movies/blob/master/Assets/MoviesArchitecture.png)
 
 This application is implemented in Clean architecture and MVVM with three layers:
 - **Presentation layer**
@@ -113,7 +113,7 @@ Run UI tests:
 ### Screen recording
 
 1. List of movies
-  <img src="https://github.com/liort2020/Movies/blob/develop/Assets/MoviesScreenRecording.gif" width="220"/>
+  <img src="https://github.com/liort2020/Movies/blob/master/Assets/MoviesScreenRecording.gif" width="220"/>
 
 2. Filter movies
-  <img src="https://github.com/liort2020/Movies/blob/develop/Assets/FilterMoviesScreenRecording.gif" width="220"/>
+  <img src="https://github.com/liort2020/Movies/blob/master/Assets/FilterMoviesScreenRecording.gif" width="220"/>
