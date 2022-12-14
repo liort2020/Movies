@@ -12,4 +12,6 @@ public struct Constants {
     static let baseMoviesUrl = "https://api.themoviedb.org/3"
     static let baseImagesUrl = "https://image.tmdb.org/t/p/original"
     static let apiKey = ""
+    
+    static let defaultMovieRating = 0.0
 }
