@@ -46,6 +46,10 @@
 		4901EA4E2949DFD000DCAC07 /* MoviesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4901EA4D2949DFD000DCAC07 /* MoviesInteractorTests.swift */; };
 		4901EA572949E22D00DCAC07 /* FakeMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4901EA502949E01100DCAC07 /* FakeMovies.swift */; };
 		4901EA582949E22E00DCAC07 /* InMemoryContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4901EA522949E02E00DCAC07 /* InMemoryContainer.swift */; };
+		4901EA5C2949E5C300DCAC07 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4901EA5B2949E5C300DCAC07 /* DIContainer.swift */; };
+		4901EA5E2949E60900DCAC07 /* DIContainer+Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4901EA5D2949E60900DCAC07 /* DIContainer+Inject.swift */; };
+		4901EA612949E63800DCAC07 /* DIContainerPerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4901EA602949E63800DCAC07 /* DIContainerPerformanceTests.swift */; };
+		4901EA632949E65600DCAC07 /* DIContainerPerformanceTests+Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4901EA622949E65600DCAC07 /* DIContainerPerformanceTests+Inject.swift */; };
 		4946AEA32949BF6300CB8B39 /* MoviesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4946AEA22949BF6300CB8B39 /* MoviesApp.swift */; };
 		4946AEA52949BF6300CB8B39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4946AEA42949BF6300CB8B39 /* ContentView.swift */; };
 		4946AEA72949BF6600CB8B39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4946AEA62949BF6600CB8B39 /* Assets.xcassets */; };
@@ -124,6 +128,10 @@
 		4901EA4D2949DFD000DCAC07 /* MoviesInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesInteractorTests.swift; sourceTree = "<group>"; };
 		4901EA502949E01100DCAC07 /* FakeMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeMovies.swift; sourceTree = "<group>"; };
 		4901EA522949E02E00DCAC07 /* InMemoryContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryContainer.swift; sourceTree = "<group>"; };
+		4901EA5B2949E5C300DCAC07 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		4901EA5D2949E60900DCAC07 /* DIContainer+Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DIContainer+Inject.swift"; sourceTree = "<group>"; };
+		4901EA602949E63800DCAC07 /* DIContainerPerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainerPerformanceTests.swift; sourceTree = "<group>"; };
+		4901EA622949E65600DCAC07 /* DIContainerPerformanceTests+Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DIContainerPerformanceTests+Inject.swift"; sourceTree = "<group>"; };
 		4946AE9F2949BF6300CB8B39 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4946AEA22949BF6300CB8B39 /* MoviesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesApp.swift; sourceTree = "<group>"; };
 		4946AEA42949BF6300CB8B39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -411,6 +419,24 @@
 			path = "Preview Fake Data";
 			sourceTree = "<group>";
 		};
+		4901EA592949E5A200DCAC07 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				4901EA5B2949E5C300DCAC07 /* DIContainer.swift */,
+				4901EA5D2949E60900DCAC07 /* DIContainer+Inject.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		4901EA5F2949E62A00DCAC07 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				4901EA602949E63800DCAC07 /* DIContainerPerformanceTests.swift */,
+				4901EA622949E65600DCAC07 /* DIContainerPerformanceTests+Inject.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
 		4946AE962949BF6300CB8B39 = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +507,7 @@
 			isa = PBXGroup;
 			children = (
 				4946AEA22949BF6300CB8B39 /* MoviesApp.swift */,
+				4901EA592949E5A200DCAC07 /* DIContainer */,
 				4946AEE52949C33700CB8B39 /* Resources */,
 			);
 			path = System;
@@ -548,6 +575,7 @@
 		4946AEE22949C30200CB8B39 /* System */ = {
 			isa = PBXGroup;
 			children = (
+				4901EA5F2949E62A00DCAC07 /* DIContainer */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -899,7 +927,9 @@
 				4901EA322949DC7F00DCAC07 /* CoreDataStack.swift in Sources */,
 				4946AEA32949BF6300CB8B39 /* MoviesApp.swift in Sources */,
 				4901E9F52949D30400DCAC07 /* HTTPMethod.swift in Sources */,
+				4901EA5C2949E5C300DCAC07 /* DIContainer.swift in Sources */,
 				4901EA582949E22E00DCAC07 /* InMemoryContainer.swift in Sources */,
+				4901EA5E2949E60900DCAC07 /* DIContainer+Inject.swift in Sources */,
 				4901EA022949D44800DCAC07 /* MoviesListAPI.swift in Sources */,
 				4901EA362949DCF700DCAC07 /* MoviesDBRepository.swift in Sources */,
 				4901E9F12949D2C700DCAC07 /* Constants.swift in Sources */,
@@ -940,6 +970,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4901EA2A2949DA3C00DCAC07 /* EndpointPerformanceTests.swift in Sources */,
+				4901EA632949E65600DCAC07 /* DIContainerPerformanceTests+Inject.swift in Sources */,
+				4901EA612949E63800DCAC07 /* DIContainerPerformanceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,8 @@
 
 import Foundation
 
-struct APIRepositories {
-    let moviesAPIRepository: MoviesAPIRepositoryProtocol
+extension DIContainer {
+    struct APIRepositories {
+        let moviesAPIRepository: MoviesAPIRepositoryProtocol
+    }
 }

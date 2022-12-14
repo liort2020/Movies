@@ -10,9 +10,12 @@ import SwiftUI
 
 @main
 struct MoviesApp: App {
+    private static let diContainer = DIContainer.boot()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .inject(Self.diContainer)
         }
     }
 }

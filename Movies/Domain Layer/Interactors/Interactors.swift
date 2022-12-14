@@ -8,6 +8,8 @@
 
 import Foundation
 
-struct Interactors {
-    let moviesInteractor: MoviesInteractorProtocol
+extension DIContainer {
+    struct Interactors {
+        let moviesInteractor: MoviesInteractorProtocol
+    }
 }
