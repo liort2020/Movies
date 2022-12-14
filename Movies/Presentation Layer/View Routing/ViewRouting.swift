@@ -10,4 +10,5 @@ import SwiftUI
 
 final class ViewRouting: ObservableObject {
     @Published var path = NavigationPath()
+    @Published var showMoviesFilterSheet: Bool = false
 }

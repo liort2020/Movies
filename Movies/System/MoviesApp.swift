@@ -12,10 +12,11 @@ import SwiftUI
 struct MoviesApp: App {
     @StateObject private var appState = AppState()
     private static let diContainer = DIContainer.boot()
+    private let moviesListViewModel = MoviesListViewModel(moviesInteractor: diContainer.interactors?.moviesInteractor)
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MoviesListView<MoviesListViewModel>(moviesListViewModel: moviesListViewModel)
                 .inject(Self.diContainer)
                 .appState(appState)
         }
